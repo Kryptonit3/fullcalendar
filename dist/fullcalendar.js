@@ -14719,8 +14719,8 @@ var ListEventRenderer = /** @class */ (function (_super) {
                     '</td>' :
                 '') +
             '<td class="fc-list-item-marker ' + theme.getClass('widgetContent') + '">' +
-            '<span class="fc-event-dot" style="background-color:' + bgColor + ',border-color:' +
-            borderColor + ',color:' + textColor + '"></span>' +
+            '<span class="fc-event-dot" style="background-color:' + bgColor + ';border-color:' +
+            borderColor + ';color:' + textColor + '"></span>' +
             '</td>' +
             '<td class="fc-list-item-title ' + theme.getClass('widgetContent') + '">' +
             '<a' + (url ? ' href="' + util_1.htmlEscape(url) + '"' : '') + '>' +
