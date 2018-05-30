@@ -22,6 +22,8 @@ export default class ListEventRenderer extends EventRenderer {
     let url = eventDef.url
     let classes = [ 'fc-list-item' ].concat(this.getClasses(eventDef))
     let bgColor = this.getBgColor(eventDef)
+    let borderColor = this.getBorderColor(eventDef)
+    let textColor = this.getTextColor(eventDef)
     let timeHtml
 
     if (componentFootprint.isAllDay) {
@@ -52,11 +54,8 @@ export default class ListEventRenderer extends EventRenderer {
         '</td>' :
         '') +
       '<td class="fc-list-item-marker ' + theme.getClass('widgetContent') + '">' +
-        '<span class="fc-event-dot"' +
-        (bgColor ?
-          ' style="background-color:' + bgColor + '"' :
-          '') +
-        '></span>' +
+        '<span class="fc-event-dot" style="background-color:' + bgColor + ',border-color:' + 
+            borderColor + ',color:' + textColor + '"></span>' +
       '</td>' +
       '<td class="fc-list-item-title ' + theme.getClass('widgetContent') + '">' +
         '<a' + (url ? ' href="' + htmlEscape(url) + '"' : '') + '>' +
